@@ -9,8 +9,10 @@ High level strategy:
 8. Edge case 2: sample has too low concentration ≡ vol_in_pool(i) > vol_available_in_well → remove sample from pool ≡ drop from output file + log issue in report file
 
 To Do's:
+- Remove standards from the input file
 - Add parrameter to select which robot to use and assign pipetting range from it 
 - Refine input file to remove outliers etc... + create a report file 
 - Requirements file
 - Install in foundry office 
-- create GUI 
+- Create GUI 
+- Improve Clariostar template with features like automated outlier removal 
