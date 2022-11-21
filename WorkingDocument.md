@@ -9,7 +9,7 @@ High level strategy:
 8. Edge case 2: sample has too low concentration ≡ vol_in_pool(i) > vol_available_in_well → remove sample from pool ≡ drop from output file + log issue in report file
 
 To Do's:
-- Remove standards from the input file
+- Refine input file: Automatically r emove standards from the input file, remove empty wells 
 - Add parrameter to select which robot to use and assign pipetting range from it 
 - Refine input file to remove outliers etc... + create a report file 
 - Requirements file
@@ -21,11 +21,11 @@ Workflow:
 
 PART 1: Run Qubit assay
 
-Input = input sample plate with samples in Echo 384 PP plate in quadrant A1. Standard in B2 (same vol as samples). Working solution in D2 with 18 uL to be transfered so a min of 33 uL available to include 15 uL dead volume.  
+Input = input sample plate with samples in Echo 384 PP plate in quadrant A1. Standard 1 in B2 (25 uL) and Standard 2 in D2 (25 uL)
 
 Run SAMI program: Qubit_Echo_Clario
-Step 1. Transfer of samples and standards from the input plate to the assay plate (Greiner 384)
-Step 2. Transfer of working solution from Echo reservoir to assay plate (use 1450nl*120wells=1710nL + dv of 250 nL -> ~ 2ml)
+Step 1. Transfer of samples and standards from the input plate to the assay plate (Greiner 384) [AQ SP High]
+Step 2. Transfer of working solution from Echo reservoir to assay plate (use 1450nl*120wells=1710nL + dv of 250 nL -> ~ 2.2ml)
 Step 3. Plate shaken on BS2 for 30 sec at 2000 rpm 
 Step 4. Plate read on Clariostar with KB_Qubit384_1quadrant program
 
