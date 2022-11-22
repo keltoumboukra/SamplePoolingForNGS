@@ -3,19 +3,18 @@ High level strategy:
 2. Calculate weights for all samples: weight(i) = c(max)/c(i)
 3. Sum all the weights: Σ(i=1,i=n) weight(i)
 4. Calculate weight_normalised for all samples: weight_norm(i)=weight(i)/Σ(i=1,i=n) weight(i)
-5. QC: sum of the weights normalised = 1 
+5. QC: sum of the weights normalised = 1
 6. Calculate volume to pipette for each sample based on weight_norm and final volume desired: vol_in_pool(i)=weight_norm(i)*v(f)
 7. Edge case 1: sample has too high concentration ≡ vol_in_pool(i) < min_pipetting_capacity → remove sample from pool ≡ drop from output file + log issue in report file
 8. Edge case 2: sample has too low concentration ≡ vol_in_pool(i) > vol_available_in_well → remove sample from pool ≡ drop from output file + log issue in report file
 
 To Do's:
-- Refine input file: Automatically r emove standards from the input file, remove empty wells 
-- Add parrameter to select which robot to use and assign pipetting range from it 
-- Refine input file to remove outliers etc... + create a report file 
+- Add parrameter to select which robot to use and assign pipetting range from it
 - Requirements file
-- Install in foundry office 
-- Create GUI 
-- Improve Clariostar template with features like automated outlier removal 
+- Install in foundry office
+- Create GUI
+- Improve Clariostar template with features like automated outlier removal
+- remove some decimals from the number in reports etc... 
 
 Workflow:
 
@@ -26,24 +25,16 @@ Input = input sample plate with samples in Echo 384 PP plate in quadrant A1. Sta
 Run SAMI program: Qubit_Echo_Clario
 Step 1. Transfer of samples and standards from the input plate to the assay plate (Greiner 384) [AQ SP High]
 Step 2. Transfer of working solution from Echo reservoir to assay plate (use 1450nl*120wells=1710nL + dv of 250 nL -> ~ 2.2ml)
-Step 3. Plate shaken on BS2 for 30 sec at 2000 rpm 
+Step 3. Plate shaken on BS2 for 30 sec at 2000 rpm
 Step 4. Plate read on Clariostar with KB_Qubit384_1quadrant program
 
 Output = file containing concentrations for the 96 samples on the plate saved in "C:\Users\Beckman Coulter\Documents\Keltoum\Clariostar\AutomatedExportQubit"
 
-PART 2: Run data processing and normalisation 
+PART 2: Run data processing and normalisation
 
 Input = file output from the Part 1
 
 Step 1: Plug the file output from part 1 into the Echo program using the appropriate parametters for the pooling: C:\Users\Beckman Coulter\Documents\Keltoum\Echo\NGS pooling
 Step 2: Launch the Echo program using:
-    1. Source plate: Input plate with samples in 
-    2. Destination plate: Greiner 384-well plate 
-
-
-
-
-
-
-
-
+    1. Source plate: Input plate with samples in
+    2. Destination plate: Greiner 384-well plate
