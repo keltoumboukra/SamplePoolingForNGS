@@ -95,7 +95,6 @@ A GUI will guide you through the process. Test input files are available in the 
 - [ ] Improve Clariostar template with features like automated outlier removal
 - [ ] Reduce number of decimals in output files 
 - [ ] Add option for user to remove list of wells
-- [ ] Add Beckman and Echo files to repository
 - [ ] Make the workflow easily changeable for different numbers of columns
 - [ ] Write SOP
 
