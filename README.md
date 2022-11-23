@@ -1,6 +1,7 @@
 # Sample Pooling For NGS
 
-Input = Clariostar file with concentrations of up to 96 samples ready for NGS pooling 
+Input = Clariostar file with concentrations of up to 96 samples ready for NGS pooling
+
 Output = Echo ready file to pool samples at equimolar concentration 
 
 ## Installation 
