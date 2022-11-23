@@ -7,6 +7,7 @@ High level strategy:
 6. Calculate volume to pipette for each sample based on weight_norm and final volume desired: vol_in_pool(i)=weight_norm(i)*v(f)
 7. Edge case 1: sample has too high concentration ≡ vol_in_pool(i) < min_pipetting_capacity → remove sample from pool ≡ drop from output file + log issue in report file
 8. Edge case 2: sample has too low concentration ≡ vol_in_pool(i) > vol_available_in_well → remove sample from pool ≡ drop from output file + log issue in report file
+9. Calculate final pool concentration for QC (all v in nL and c in ng/uL): C(final pool) = (Σ(i=1,i=n) c1(i) * v1(i)) / v(final pool)
 
 To Do's:
 - Add parrameter to select which robot to use and assign pipetting range from it
@@ -18,6 +19,7 @@ To Do's:
 - Make the workflow easily changeable for different numbers of columns
 - Write SOP
 - Calculate expected final pool concentration
+- Finish readme file
 
 Workflow:
 
