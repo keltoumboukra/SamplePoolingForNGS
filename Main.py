@@ -1,4 +1,5 @@
-### Imports
+# %%
+# Imports
 import numpy as np
 import pandas as pd
 import csv 
@@ -8,12 +9,16 @@ import os
 import shutil
 import PySimpleGUI as sg
 
-### Timestamp 
+# %%
+# Timestamp 
+
 timestr = time.strftime("%Y%m%d-%H%M%S")
 
-### Inputs
-input_file_folder = "/Users/keltoumboukra/Desktop/Coding projects - Git/SamplePoolingForNGS/Files/"
-input_file_name = "InputTestFile.csv"
+
+# %%
+# Inputs
+input_file_folder = "/Users/keltoumboukra/Desktop/Coding projects - Git/SamplePoolingForNGS/Files/ClariostarOutputs/"
+input_file_name = "qubit_data_Marko_22112022.CSV"
 
 # final desired vol (nL)
 final_pool_vol = 10000
@@ -28,13 +33,16 @@ min_pipetting_capacity = float(25) # for Echo
 vol_available_in_well = 10000 # for e.g, if there is 20 uL in the well, 5000 nL is what can be available as 15 uL is the minimum working range in the PP-0200 Echo plate)
 
 
-### Create GUI
+
+# %%
+# Create GUI
+
 sg.theme('LightBrown9')
 
 layout = [
     [sg.Text('Please enter the desired parameters')],
-    [sg.Text('Input file folder', size =(25, 1)), sg.InputText("/Users/keltoumboukra/Desktop/Coding projects - Git/SamplePoolingForNGS/Files/")],
-    [sg.Text('Input file name', size =(25, 1)), sg.InputText("InputTestFile.csv")],
+    [sg.Text('Input file folder', size =(25, 1)), sg.InputText("/Users/keltoumboukra/Desktop/Coding projects - Git/SamplePoolingForNGS/Files/ClariostarOutputs/")],
+    [sg.Text('Input file name', size =(25, 1)), sg.InputText("qubit_data_Marko_22112022.CSV")],
     [sg.Text('Final pool volume (nL)', size =(25, 1)), sg.InputText("1000")],
     [sg.Text('Pooling well position', size =(25, 1)), sg.InputText("A1")],
     [sg.Text('Minimum pipetting capacity (nL)', size =(25, 1)), sg.InputText("25")],
@@ -58,7 +66,11 @@ vol_available_in_well = float(values[5])
 input_file_df = pd.read_csv(input_file_folder + input_file_name)
 input_file_df.rename(columns={input_file_df.columns[2]: "Concentration"},inplace=True)
 
-### Outputs
+
+
+# %%
+# Outputs
+
 output_files_folder = "/Users/keltoumboukra/Desktop/Coding projects - Git/SamplePoolingForNGS/Files/"
 output_files_folder = output_files_folder + "NGSpooling_" + timestr
 os.mkdir(output_files_folder)
@@ -77,7 +89,11 @@ output_report_df = pd.DataFrame(columns=['Sample Well ID','Sample Concentration'
 os.mkdir(output_files_folder + "InputFiles/")
 shutil.copyfile(input_file_folder+input_file_name, output_files_folder + "InputFiles/" + "InputFile.csv")
 
-### Trim input data frame 
+
+
+# %%
+# Trim input data frame 
+
 # Remove standards 
 input_file_df = input_file_df[input_file_df["Content"].str.contains("Standard") == False]
 input_file_df = input_file_df.reset_index(drop=True)
@@ -99,7 +115,10 @@ output_report_df = output_report_df.reset_index(drop=True)
 # Copy trimmed input file into the output folder
 input_file_df.to_csv(output_files_folder + "InputFiles/" + "InputTrimmedFile.csv", index=False)
 
-### Calculate Weights 
+
+# %%
+# Calculate Weights 
+
 max_concentration = input_file_df['Concentration'].max()
 sum_weights = float()
 
@@ -113,7 +132,10 @@ for row in input_file_df.itertuples():
     sum_weights += sample_weight
     output_file_df = output_file_df.append({'Sample Well ID': Well, 'Sample Concentration': Concentration, 'Sample Calculated Weight': sample_weight}, ignore_index=True)  
     
-### Calculate Normalised Weights 
+
+# %%
+# Calculate Normalised Weights 
+
 sum_normalised_weights = float(0)
 for row in input_file_df.itertuples():
     
@@ -125,7 +147,10 @@ for row in input_file_df.itertuples():
     sum_normalised_weights += sample_normalised_weight # for QC, should be =1
     output_file_df.at[Index,'Sample Calculated Weight Normalised']=sample_normalised_weight
 
-### Calculate Volume to pipette for each sample in the final pool
+
+# %%
+# Calculate Volume to pipette for each sample in the final pool
+
 vol_in_pool = float()
 sum_vol_in_pool = float(0)
 fail_bool = bool(0)
@@ -147,9 +172,29 @@ for row in input_file_df.itertuples():
         fail_bool = bool(1)
     else:
         output_file_df.at[Index,'Sample Calculated Volume In Pool']=vol_in_pool
-        output_echo_file_df = output_echo_file_df.append({'Source Well': Well, 'Destination Well': pool_well_in_output_plate, 'Transfer Volume': vol_in_pool}, ignore_index=True)     
+        output_echo_file_df = output_echo_file_df.append({'Source Well': Well, 'Destination Well': pool_well_in_output_plate, 'Transfer Volume': vol_in_pool}, ignore_index=True)  
+        
+        
 
-### Export files and communicate outcome to user in GUI
+# %%
+# Calculate final pool concentration for QC (all v in nL and c in ng/uL)
+
+sum_concentrations = float(0)
+
+for row in output_file_df.itertuples():
+    
+    Concentration = row[2]
+    VolInPool = row[5]
+    
+    sum_concentrations += (Concentration*VolInPool)
+
+final_pool_concentration = "%.3f"%(sum_concentrations / final_pool_vol)
+    
+    
+
+# %%
+# Export files and communicate outcome to user in GUI
+
 os.mkdir(output_files_folder + "OutputFiles/")
 
 if fail_bool == bool(1):
@@ -158,7 +203,7 @@ if fail_bool == bool(1):
 else:
     output_file_df.to_csv(output_files_folder + "OutputFiles/" + output_file_name, index=False)
     output_echo_file_df.to_csv(output_files_folder + "OutputFiles/" + output_echo_file_name, index=False)
-    layout = [[sg.Text("Processing successful! Check output file folder for processing details, report and Echo ready file")], [sg.Button("OK")]]
+    layout = [[sg.Text("Processing successful! Final pool concentration: {} ng/uL.".format(final_pool_concentration))], [sg.Button("OK")]]
     window = sg.Window("Echo File Generator For NGS Pooling", layout)
 
 output_report_df.to_csv(output_files_folder + "OutputFiles/" + output_report_name, index=False)
@@ -168,3 +213,9 @@ while True:
     if event == "OK" or event == sg.WIN_CLOSED:
         break
 window.close()
+
+
+# %%
+
+
+
