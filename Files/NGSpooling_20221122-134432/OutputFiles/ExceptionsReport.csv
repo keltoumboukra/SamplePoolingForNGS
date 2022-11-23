@@ -1,4 +1,0 @@
-Sample Well ID,Sample Concentration,Comment
-O23,-0.8490000000000001,Sample has negative value for concentration
-A01,1.9480000000000002,Volume to be pipetted for this well (5.133470221542104e-07 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
-A03,3.028,Volume to be pipetted for this well (3.3025099047437315e-07 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file

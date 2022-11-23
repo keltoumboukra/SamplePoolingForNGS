@@ -10,11 +10,14 @@ High level strategy:
 
 To Do's:
 - Add parrameter to select which robot to use and assign pipetting range from it
-- Requirements file
 - Install in foundry office
-- Create GUI
 - Improve Clariostar template with features like automated outlier removal
-- remove some decimals from the number in reports etc... 
+- Remove some decimals from the number in reports etc... 
+- Add option for user to remove list of samples
+- Add Beckman and Echo files to repo
+- Make the workflow easily changeable for different numbers of columns
+- Write SOP
+- Calculate expected final pool concentration
 
 Workflow:
 
