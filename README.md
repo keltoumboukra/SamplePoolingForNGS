@@ -3,7 +3,7 @@
 * **Input**: Clariostar file with concentrations of up to 96 samples ready for NGS pooling
 * **Output**: Echo ready file to pool samples at equimolar concentration 
 
-## Installation 
+## Installation (first time use only)
 
 1. Clone the repository into your computer
 2. Use Pip to install the requirements: 
@@ -14,11 +14,21 @@ pip3 install requirements.txt
 
 ## Usage
 
-To run: 
+* To run via the Terminal:  
 
 ```bash
 python3 Main.py 
 ```
+
+* To run via via executable: 
+
+Open the executable file:
+
+```bash
+SamplePoolingForNGS/Executable/dist/Main/Main.exe
+```
+
+**Tip**: You can also create a shortcut in your location of interest. 
 
 A GUI will guide you through the process. Test input files are available in the repository. 
 
