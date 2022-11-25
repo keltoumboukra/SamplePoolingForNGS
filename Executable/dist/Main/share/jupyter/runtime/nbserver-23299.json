@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/Users/keltoumboukra",
+  "password": false,
+  "pid": 23299,
+  "port": 8889,
+  "secure": false,
+  "sock": "",
+  "token": "4579d03ed56adc4a2b5c5d369567da48a08b9c2d2735d2a4",
+  "url": "http://localhost:8889/"
+}
