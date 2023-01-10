@@ -1,0 +1,87 @@
+Sample Well ID,Sample Concentration,Comment
+A07,-1.2670000000000001,Sample has negative value for concentration
+A09,-1.286,Sample has negative value for concentration
+A11,-1.228,Sample has negative value for concentration
+A13,-1.25,Sample has negative value for concentration
+A15,-1.338,Sample has negative value for concentration
+A17,-1.297,Sample has negative value for concentration
+A19,-1.281,Sample has negative value for concentration
+A21,-1.311,Sample has negative value for concentration
+A23,-1.341,Sample has negative value for concentration
+C07,-1.203,Sample has negative value for concentration
+C09,-1.3259999999999998,Sample has negative value for concentration
+C11,-1.2409999999999999,Sample has negative value for concentration
+C13,-1.276,Sample has negative value for concentration
+C15,-1.236,Sample has negative value for concentration
+C17,-1.2429999999999999,Sample has negative value for concentration
+C19,-1.2670000000000001,Sample has negative value for concentration
+C21,-1.296,Sample has negative value for concentration
+C23,-1.325,Sample has negative value for concentration
+E07,-1.31,Sample has negative value for concentration
+E09,-1.2570000000000001,Sample has negative value for concentration
+E11,-1.26,Sample has negative value for concentration
+E13,-1.251,Sample has negative value for concentration
+E15,-1.162,Sample has negative value for concentration
+E17,-1.22,Sample has negative value for concentration
+E19,-1.291,Sample has negative value for concentration
+E21,-1.311,Sample has negative value for concentration
+E23,-1.2819999999999998,Sample has negative value for concentration
+G07,-1.2309999999999999,Sample has negative value for concentration
+G09,-1.229,Sample has negative value for concentration
+G11,-1.163,Sample has negative value for concentration
+G13,-1.2890000000000001,Sample has negative value for concentration
+G15,-1.274,Sample has negative value for concentration
+G17,-1.2229999999999999,Sample has negative value for concentration
+G19,-1.347,Sample has negative value for concentration
+G21,-1.244,Sample has negative value for concentration
+G23,-1.3019999999999998,Sample has negative value for concentration
+I07,-1.3619999999999999,Sample has negative value for concentration
+I09,-1.202,Sample has negative value for concentration
+I11,-1.276,Sample has negative value for concentration
+I13,-1.21,Sample has negative value for concentration
+I15,-1.237,Sample has negative value for concentration
+I17,-1.288,Sample has negative value for concentration
+I19,-1.2590000000000001,Sample has negative value for concentration
+I21,-1.2819999999999998,Sample has negative value for concentration
+I23,-1.307,Sample has negative value for concentration
+K07,-1.2890000000000001,Sample has negative value for concentration
+K09,-1.324,Sample has negative value for concentration
+K11,-1.204,Sample has negative value for concentration
+K13,-1.1540000000000001,Sample has negative value for concentration
+K15,-1.297,Sample has negative value for concentration
+K17,-1.298,Sample has negative value for concentration
+K19,-1.2109999999999999,Sample has negative value for concentration
+K21,-1.368,Sample has negative value for concentration
+K23,-1.227,Sample has negative value for concentration
+M07,-1.236,Sample has negative value for concentration
+M09,-1.226,Sample has negative value for concentration
+M11,-1.33,Sample has negative value for concentration
+M13,-1.222,Sample has negative value for concentration
+M15,-1.271,Sample has negative value for concentration
+M17,-1.261,Sample has negative value for concentration
+M19,-1.1909999999999998,Sample has negative value for concentration
+M21,-1.3359999999999999,Sample has negative value for concentration
+M23,-1.319,Sample has negative value for concentration
+O07,-1.205,Sample has negative value for concentration
+O09,-1.102,Sample has negative value for concentration
+O11,-1.235,Sample has negative value for concentration
+O13,-1.234,Sample has negative value for concentration
+O15,-1.311,Sample has negative value for concentration
+O17,-1.271,Sample has negative value for concentration
+O19,-1.242,Sample has negative value for concentration
+O21,-1.329,Sample has negative value for concentration
+O23,-1.273,Sample has negative value for concentration
+A01,3.426,Volume to be pipetted for this well (12.290563951705234 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+A03,3.449,Volume to be pipetted for this well (12.208603101925815 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+C01,2.8339999999999996,Volume to be pipetted for this well (14.857964748956293 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+C05,2.251,Volume to be pipetted for this well (18.706118213479403 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E01,2.137,Volume to be pipetted for this well (19.70401127680961 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E03,2.7119999999999997,Volume to be pipetted for this well (15.52635401863648 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+G01,3.3760000000000003,Volume to be pipetted for this well (12.47259244625063 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+G05,2.765,Volume to be pipetted for this well (15.228742169454659 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+K01,1.758,Volume to be pipetted for this well (23.951918144790746 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+K03,2.0340000000000003,Volume to be pipetted for this well (20.70180535818197 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+K05,2.242,Volume to be pipetted for this well (18.781209678207908 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+M05,2.085,Volume to be pipetted for this well (20.19543026308975 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+O01,2.222,Volume to be pipetted for this well (18.95025747009097 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+O03,3.7,Volume to be pipetted for this well (11.380397864470845 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file

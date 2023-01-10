@@ -1,7 +1,7 @@
 # Sample Pooling For NGS
 
 * **Input**: Clariostar file with concentrations of up to 96 samples ready for NGS pooling
-* **Output**: Echo ready file to pool samples at equimolar concentration
+* **Output**: Echo or Biomek ready file to pool samples at equimolar concentration
 
 ## Installation (first time use only)
 
@@ -34,35 +34,18 @@ A GUI will guide you through the process. Test input files are available in the 
 
 ## High-level workflow
 
+This protocol can be run either using the Echo 525 for non genomic DNA samples, or the Biomek i7 for genomic DNA samples. Bellow is an overview of the steps involved, although the setup and transfer volumes will depend on which robot is used.
+
 ### Part 1: Qubit assay
 
-**Input**:
-    Input samples plate with samples in Echo 384-well PP-0200 plate (25 uL) in quadrant A1.
-    Standard 1 [0 ng/uL] in B2 (30 uL) and Standard 2 [50 ng/uL] in D2 (30 uL)
-
-* Run SAMI program: Qubit_Echo_Clario. The following steps will be performed:
-
-    * Transfer of samples and standards from the input plate to the assay plate
-    * Transfer of working solution from Echo reservoir to assay plate (use 1450nl*120wells=1710nL + dv of 250 nL -> ~ 2. 2ml)
-    * Plate shaken on BS2 for 30 sec at 2000 rpm
-    * Plate read on Clariostar
-
-**Output**:
-    Automatically exported file containing concentrations of samples based on standard curve.
+**Input**: 1-24 Samples in a plate format
+**Step Description**: Samples are mixed with Qubit working solution in a plate.
+**Output**: Clariostar file with the estimated concentrations of the samples
 
 ### Part 2: Generation of samples volumes for pooling
 
 **Input**: Clariostar file from PART 1
-
-* Run Main.py and use GUI to enter desired parametters for the pooling:
-    * Input file folder location
-    * Input file name
-    * Desired volume for final pool
-    * Desired well in 384 well plate for pooling
-    * Minimum pipetting capacity (currently set to 25 nL as using Echo)
-    * Volume of sample available for pipetting  (for e.g, if there is 20 uL in the well, 5000 nL is what can be available as 15 uL is the minimum working range in the PP-0200 Echo plate)
-
-**Output**: Folder labbeled "NGSpooling-[Date]-[Time]" two folders:
+**Step Description**: Using the present automated data processing tool, a file will be generated to perform the transfers of the samples into the final pool. This file will be fit for either, Echo 525 or Biomek i7 depending on the option selected by the user. The following files will be generated in a folder, during the processing:
 
 * InputFiles:
     * InputFile.csv: Copy of the file input by user
@@ -70,20 +53,12 @@ A GUI will guide you through the process. Test input files are available in the 
 * OutputFiles:
     * ExceptionsReport.csv: Report specifying wells excluded from the processing (e.g empty wells)
     * ProcessingDetails.csv: File containing the details of the data processing stages for each sample
-    * EchoFile.csv: Echo ready file containing volumes of samples to be pipetted into the final pool
+    * EchoFile.csv or BeckmanFile.csv: Echo or Beckman ready file containing volumes of samples to be pipetted into the final pool
 
 ### Part 3: Generation of samples volumes for pooling
 
-**Input**: Echo ready file from PART 2
-
-1. Open Echo Cherry Pick software
-2. Open C:\Users\Beckman Coulter\Documents\Keltoum\Echo\NGS pooling\Pooling_Post_Qubit.ecp
-3. In the "Pick List" section, import the Echo file from PART 2
-4. Press "Run"
-5. Follow the instruction on the Echo software and place on the tray the:
-    * Source plate: Echo 384-well PP-0200 plate containing the input samples (the same plate as the one used in PART 1)
-    * Destination plate: Greiner 384 PS 781096 plate
-
+**Input**: Echo or Beckman ready file from PART 2
+**Step Description**: The Echo or Biomek robot will transfer the volumes specified in the list into the same well.  
 **Output**: Destination plate with final pool in the selected well and with the desired volume.
 
 ## Data processing details
@@ -100,13 +75,12 @@ A GUI will guide you through the process. Test input files are available in the 
 
 ## Task List
 
-- [ ] Add parrameter to select which robot to use and assign pipetting range from it
 - [ ] Install project in Foundry's Beckman workcell
 - [ ] Improve Clariostar template with features like automated outlier removal
 - [ ] Reduce number of decimals in output files
 - [ ] Add option for user to remove list of wells
 - [ ] Make the workflow easily adaptable for different numbers of columns / samples
-- [ ] Write SOP
+- [ ] Write SOP (missing Echo one)
 - [ ] Test low dead volume plates to reduce amount required as input for Echo + Test low volume assay plate (test robotic arm or find high profile low volume plates)
 
 ## License

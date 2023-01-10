@@ -14,7 +14,7 @@ Types if import:
 IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
             tracking down the missing module yourself. Thanks!
 
-missing module named 'org.python' - imported by pickle (optional), setuptools.sandbox (conditional), xml.sax (delayed, conditional)
+missing module named org - imported by pickle (optional)
 missing module named pyimod02_importers - imported by /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/PyInstaller/hooks/rthooks/pyi_rth_pkgutil.py (top-level), /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/PyInstaller/hooks/rthooks/pyi_rth_pkgres.py (top-level)
 missing module named netbios - imported by uuid (delayed)
 missing module named win32wnet - imported by uuid (delayed)
@@ -27,7 +27,7 @@ missing module named importlib.metadata - imported by importlib (delayed, condit
 missing module named 'typing.io' - imported by importlib.resources (top-level)
 missing module named __builtin__ - imported by numpy.core.numerictypes (conditional), numpy.core.numeric (conditional), numpy.lib.function_base (conditional), numpy.lib._iotools (conditional), numpy.ma.core (conditional), scipy._lib.six (conditional), numpy.distutils.misc_util (delayed, conditional), numpy (conditional), pyparsing (conditional), ptyprocess.ptyprocess (optional), ipython_genutils.py3compat (conditional), pkg_resources._vendor.pyparsing (conditional), setuptools._vendor.pyparsing (conditional)
 missing module named ordereddict - imported by pyparsing (optional), pkg_resources._vendor.pyparsing (optional), setuptools._vendor.pyparsing (optional)
-missing module named org - imported by copy (optional)
+missing module named 'org.python' - imported by copy (optional), setuptools.sandbox (conditional), xml.sax (delayed, conditional)
 missing module named _manylinux - imported by setuptools.pep425tags (delayed, optional), packaging._manylinux (delayed, optional)
 missing module named StringIO - imported by setuptools._vendor.six (conditional), numpy.lib.utils (delayed, conditional), numpy.lib.format (delayed, conditional), numpy.testing._private.utils (conditional), scipy._lib.six (conditional), six (conditional), urllib3.packages.six (conditional), pkg_resources._vendor.six (conditional)
 missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.markers (top-level), pkg_resources._vendor.packaging.requirements (top-level)
