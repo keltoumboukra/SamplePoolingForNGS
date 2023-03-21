@@ -229,9 +229,9 @@ wells = [letter + str(number) if number >= 10 else letter + "0" + str(number) fo
 d1=dict(zip(wells,x))
 d1
 
-#print(d1["G10"])
-#print(d1["G10"]["plate"])
-#print(d1["G10"]["well"])
+print(d1["G10"])
+print(d1["G10"]["plate"])
+print(d1["G10"]["well"])
 
 
 
