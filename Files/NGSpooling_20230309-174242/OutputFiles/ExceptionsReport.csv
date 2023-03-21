@@ -1,0 +1,3 @@
+Sample Well ID,Sample Concentration,Comment
+E07,37.644,Volume to be pipetted for this well (20.825191369322496 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E13,32.721,Volume to be pipetted for this well (23.958421316792766 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file

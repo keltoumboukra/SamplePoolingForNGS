@@ -1,0 +1,26 @@
+Sample Well ID,Sample Concentration,Comment
+A07,94.446,Volume to be pipetted for this well (0.49776884066498345 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E01,96.667,Volume to be pipetted for this well (0.48633221187628684 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G03,97.654,Volume to be pipetted for this well (0.48141679731956727 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G15,97.762,Volume to be pipetted for this well (0.48088496476591125 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G17,97.889,Volume to be pipetted for this well (0.48026107045168526 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+C19,97.915,Volume to be pipetted for this well (0.4801335436393302 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E05,97.954,Volume to be pipetted for this well (0.4799423803565452 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E03,99.066,Volume to be pipetted for this well (0.47455510392511074 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+I09,99.125,Volume to be pipetted for this well (0.4742726448973016 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+I03,99.361,Volume to be pipetted for this well (0.47314616323753805 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+C13,99.443,Volume to be pipetted for this well (0.47275601023143937 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G11,99.84100000000001,Volume to be pipetted for this well (0.4708714448517645 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G21,100.175,Volume to be pipetted for this well (0.4693014816615425 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E21,101.068,Volume to be pipetted for this well (0.46515490487043404 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E15,101.26,Volume to be pipetted for this well (0.46427292045669577 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+C15,103.00399999999999,Volume to be pipetted for this well (0.45641213861058816 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+C17,104.883,Volume to be pipetted for this well (0.4482354235237838 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+G19,105.85600000000001,Volume to be pipetted for this well (0.4441153635641345 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+I01,107.135,Volume to be pipetted for this well (0.43881342162173914 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E09,113.125,Volume to be pipetted for this well (0.41557812972769076 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E13,115.94200000000001,Volume to be pipetted for this well (0.4054809812272086 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E07,119.12299999999999,Volume to be pipetted for this well (0.39465322335271125 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E11,122.77799999999999,Volume to be pipetted for this well (0.38290472173715995 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+K10,124.49600000000001,Volume to be pipetted for this well (0.37762077436580305 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file
+E23,125.18700000000001,Volume to be pipetted for this well (0.37553640494176727 nL) is smaller than pipetting capacity (0.5 nL). You MUST reprocess the file

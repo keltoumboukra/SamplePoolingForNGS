@@ -1,0 +1,15 @@
+Sample Well ID,Sample Concentration,Comment
+A07,29.78,Volume to be pipetted for this well (21.937080364528093 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+C13,28.145,Volume to be pipetted for this well (23.211449751488605 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+C17,26.318,Volume to be pipetted for this well (24.822792509143802 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+C19,29.484,Volume to be pipetted for this well (22.157314246901596 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E07,37.644,Volume to be pipetted for this well (17.35432614110208 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E09,29.792,Volume to be pipetted for this well (21.928244268785132 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E11,29.406,Volume to be pipetted for this well (22.216086963736885 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E13,32.721,Volume to be pipetted for this well (19.965351097327304 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E21,30.503,Volume to be pipetted for this well (21.417114816760538 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+E23,27.343000000000004,Volume to be pipetted for this well (23.89226687838374 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+G21,29.824,Volume to be pipetted for this well (21.904716109698455 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+I01,30.426,Volume to be pipetted for this well (21.471315758090014 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+I05,28.046,Volume to be pipetted for this well (23.293384199374124 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
+I09,28.905,Volume to be pipetted for this well (22.601150432646488 nL) is smaller than pipetting capacity (25.0 nL). You MUST reprocess the file
