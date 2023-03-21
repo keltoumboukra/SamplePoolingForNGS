@@ -1,6 +1,6 @@
 # Sample Pooling For NGS
 
-* **Input**: Clariostar file with concentrations of up to 96 samples ready for NGS pooling
+* **Input**: Clariostar file with concentrations of input samples ready for NGS pooling
 * **Output**: Echo or Biomek ready file to pool samples at equimolar concentration
 
 ## Installation (first time use only)
@@ -34,11 +34,11 @@ A GUI will guide you through the process. Test input files are available in the 
 
 ## High-level workflow
 
-This protocol can be run either using the Echo 525 for non genomic DNA samples, or the Biomek i7 for genomic DNA samples. Bellow is an overview of the steps involved, although the setup and transfer volumes will depend on which robot is used.
+This protocol can be run either using the Echo 525 for non genomic DNA samples, or the Biomek i7 for genomic DNA samples or PacBio samples. Bellow is an overview of the steps involved, although the setup and transfer volumes will depend on which robot is used.
 
 ### Part 1: Qubit assay
 
-**Input**: 1-24 Samples in a plate format
+**Input**: Samples in a plate format
 **Step Description**: Samples are mixed with Qubit working solution in a plate.
 **Output**: Clariostar file with the estimated concentrations of the samples
 
@@ -53,7 +53,7 @@ This protocol can be run either using the Echo 525 for non genomic DNA samples, 
 * OutputFiles:
     * ExceptionsReport.csv: Report specifying wells excluded from the processing (e.g empty wells)
     * ProcessingDetails.csv: File containing the details of the data processing stages for each sample
-    * EchoFile.csv or BeckmanFile.csv: Echo or Beckman ready file containing volumes of samples to be pipetted into the final pool
+    * EchoFile.csv or BeckmanFile.csv or BeckmanPacBioFile: Echo or Beckman ready file containing volumes of samples to be pipetted into the final pool
 
 ### Part 3: Generation of samples volumes for pooling
 
@@ -80,9 +80,9 @@ This protocol can be run either using the Echo 525 for non genomic DNA samples, 
 - [ ] Reduce number of decimals in output files
 - [ ] Add option for user to remove list of wells
 - [ ] Make the workflow easily adaptable for different numbers of columns / samples
-- [ ] Write SOP (missing Echo one)
 - [ ] Test low dead volume plates to reduce amount required as input for Echo + Test low volume assay plate (test robotic arm or find high profile low volume plates)
 
 ## License
 
 [London Biofoundry](https://www.londonbiofoundry.org/)
+
